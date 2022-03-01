@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
 
-    <title>Project App</title>
+    <title>T.E.A.M. | Marketplace</title>
 
     <!--Google Fonts-->
     <link
@@ -20,10 +21,29 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+
+    <style>
+      @font-face {
+        font-family:'technology';
+        src:url('/Technology.woff');
+      }
+    </style>
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   </head>
 
   <body>
     <div id="app"></div>
-    <script src="/bundle.js"></script>
+    <script src="/js/bundle.js"></script>
   </body>
 </html>
